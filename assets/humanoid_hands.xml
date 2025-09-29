@@ -1,0 +1,340 @@
+<!-- Modified from IsaacGymEnvs amp_humanoid.xml v1.2.0 -->
+
+<mujoco model="humanoid">
+
+  <default>
+    <default class="body">
+      <geom condim="1" friction="1.0 0.05 0.05" solimp=".9 .99 .003" solref=".015 1"/>
+      <joint type="hinge" limited="true" solimplimit="0 .99 .01"/>
+    </default>
+  </default>
+
+  <worldbody>
+    <geom name="floor" type="plane" conaffinity="1" size="100 100 .2" material="grid"/>
+    <body name="pelvis" pos="0 0 1" childclass="body">
+      <freejoint name="root"/>
+      <geom name="pelvis" type="sphere" pos="0 0 0.07" size=".09" density="2226"/>
+      <geom name="upper_waist" type="sphere" pos="0 0 0.205" size="0.07" density="2226"/>
+      <body name="torso" pos="0 0 0.236151">
+        <joint name="abdomen_x" pos="0 0 0" axis="1 0 0" range="-60 60" stiffness="600" damping="60" armature=".025"/>
+        <joint name="abdomen_y" pos="0 0 0" axis="0 1 0" range="-60 90" stiffness="600" damping="60" armature=".025"/>
+        <joint name="abdomen_z" pos="0 0 0" axis="0 0 1" range="-50 50" stiffness="600" damping="60" armature=".025"/>
+        <geom name="torso" type="sphere" pos="0 0 0.12" size="0.11" density="1794"/>
+
+        <geom name="right_clavicle" type="capsule" fromto="-0.0060125 -0.0457775 0.2287955 -0.016835 -0.128177 0.2376182" size=".045" density="1100"/>
+        <geom name="left_clavicle" type="capsule" fromto="-0.0060125 0.0457775 0.2287955 -0.016835 0.128177 0.2376182" size=".045" density="1100"/>
+
+        <body name="head" pos="0 0 0.223894">
+          <joint name="neck_x" pos="0 0 0" axis="1 0 0" range="-50 50" stiffness="50" damping="5" armature=".017"/>
+          <joint name="neck_y" pos="0 0 0" axis="0 1 0" range="-40 60" stiffness="50" damping="5" armature=".017"/>
+          <joint name="neck_z" pos="0 0 0" axis="0 0 1" range="-45 45" stiffness="50" damping="5" armature=".017"/>
+          <geom name="head" type="sphere" pos="0 0 0.175" size="0.095" density="1081"/>
+        </body>
+
+        <body name="right_upper_arm" pos="-0.02405 -0.18311 0.24350">
+          <joint name="right_shoulder_x" pos="0 0 0" axis="1 0 0" range="-180 45" stiffness="200" damping="20" armature=".02"/>
+          <joint name="right_shoulder_y" pos="0 0 0" axis="0 1 0" range="-180 60" stiffness="200" damping="20" armature=".02"/>
+          <joint name="right_shoulder_z" pos="0 0 0" axis="0 0 1"  range="-90 90" stiffness="200" damping="20" armature=".02"/>
+          <geom name="right_upper_arm" type="capsule" fromto="0 0 -0.05 0 0 -0.23" size=".045" density="982"/>
+
+          <body name="right_lower_arm" pos="0 0 -0.274788">
+            <joint name="right_elbow" pos="0 0 0" axis="0 1 0" range="-160 0" stiffness="150" damping="15" armature=".015"/>
+            <geom name="right_lower_arm" type="capsule" fromto="0 0 -0.0525 0 0 -0.2" size="0.04" density="1056"/>
+
+	          <body name="right_hand" pos="0 0 -0.258947">
+			          <joint name="RH:wrist_x" pos="0 0 0" axis="1 0 0" range="-90 75" stiffness="10" damping="0.4" armature=".01" />
+                <joint name="RH:wrist_y" pos="0 0 0" axis="0 1 0" range="-45 45" stiffness="10" damping="0.4" armature=".01" />
+                <joint name="RH:wrist_z" pos="0 0 0" axis="0 0 1" range="-90 180" stiffness="10" damping="0.4" armature=".01" />
+                <!-- <geom name="right_hand" type="box" pos="0 0 -0.05" size="0.04 0.02 0.05" density="1865"/> -->
+                <!-- <body name="RH:palm" pos="0 0.02 -0.05"></body> -->
+
+                <geom name="right_hand" type="box" pos="-0.005 0.002 -0.04" size="0.0475 0.0115 0.04" density="1865"/>
+                <body name="RH:palm" pos="0 0.0135 -0.08"></body>
+                
+                <body name="RH:thumb1" pos="0.0278 0.0010 -0.0208">
+                  <joint name="RH:thumb1_x" pos="0 0 0" axis="1 0 0" range="20 45" stiffness="10" damping="0.2" armature=".01"/>
+                  <joint name="RH:thumb1_y" pos="0 0 0" axis="0 1 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                  <joint name="RH:thumb1_z" pos="0 0 0" axis="0 0 1" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                  <geom type="capsule" fromto="0 0 0 0.02989 0 0" size="0.01" density="1000"/>
+                    <body name="RH:thumb2" pos="0.03989 0 0">
+                      <joint name="RH:thumb2" pos="0 0 0" axis="0 1 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                      <geom type="capsule" fromto="0.0091 0 0 0.021278 0 0" size="0.009" density="1000"/>
+                      <body name="RH:thumb3" pos="0.030278 0 0">
+                          <joint name="RH:thumb3" pos="0 0 0" axis="0 1 0" range="-5 90" stiffness="10" damping="0.2" armature=".01"/>
+                          <geom type="capsule" fromto="0.0086 0 0 0.021778 0 0" size="0.0085" density="1000"/>
+                          <body name="RH:thumb_tip" pos="0.030278 0 0"></body>
+                      </body>
+                    </body>
+                </body>
+                <body name="RH:index1" pos="0.0312 0.0010 -0.0784" quat="0.9956693053245544 0.0 0.0 0.0929655209183693">
+                    <joint name="RH:index1_x" pos="0 0 0" axis="1 0 0" range="-40 90" stiffness="10" damping="0.2" armature=".01"/>
+                    <joint name="RH:index1_y" pos="0 0 0" axis="0 1 0" range="-30 30" stiffness="10" damping="0.2" armature=".01"/>
+                    <!-- <joint name="RH:index1_z" pos="0 0 0" axis="0 0 1" range="-30 30" stiffness="10" damping="0.2" armature=".01"/> -->
+                    <geom type="capsule" fromto="0 0 0 0 0 -0.036" size="0.009" density="1000"/>
+                    <body name="RH:index2" pos="0 0 -0.045">
+                      <joint name="RH:index2" pos="0 0 0" axis="1 0 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                      <geom type="capsule" fromto="0 0 -0.0076 0 0 -0.0201851" size="0.0075" density="1000"/>
+                      <body name="RH:index3" pos="0 0 -0.0276851">
+                          <joint name="RH:index3" pos="0 0 0" axis="1 0 0" range="-5 90" stiffness="10" damping="0.2" armature=".01"/>
+                          <geom type="capsule" fromto="0 0 -0.0071 0 0 -0.0206851" size="0.007" density="1000"/>
+                          <body name="RH:index_tip" pos=" 0 0 -0.0276851"></body>
+                      </body>
+                    </body>
+                </body>
+                <body name="RH:middle1" pos="0.0054 0.0010 -0.0813" quat="0.999756932258606 0.0 0.0 -0.022048236802220345">
+                    <joint name="RH:middle1_x" pos="0 0 0" axis="1 0 0" range="-40 90" stiffness="10" damping="0.2" armature=".01"/>
+                    <joint name="RH:middle1_y" pos="0 0 0" axis="0 1 0" range="-20 20" stiffness="10" damping="0.2" armature=".01"/>
+                    <!-- <joint name="RH:middle1_z" pos="0 0 0" axis="0 0 1" range="-20 20" stiffness="10" damping="0.2" armature=".01"/> -->
+                    <geom type="capsule" fromto="0 0 0 0 0 -0.038" size="0.009" density="1000"/>
+                    <body name="RH:middle2" pos="0 0 -0.047">
+                      <joint name="RH:middle2" pos="0 0 0" axis="1 0 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                      <geom type="capsule" fromto="0 0 -0.0076 0 0 -0.0235" size="0.0075" density="1000"/>
+                      <body name="RH:middle3" pos="0 0 -0.031">
+                          <joint name="RH:middle3" pos="0 0 0" axis="1 0 0" range="-5 90" stiffness="10" damping="0.2" armature=".01"/>
+                          <geom type="capsule" fromto="0 0 -0.0071 0 0 -0.024" size="0.007" density="1000"/>
+                          <body name="RH:middle_tip" pos=" 0 0 -0.031"></body>
+                      </body>
+                    </body>
+                </body>
+                <body name="RH:ring1" pos="-0.0196 0.0036 -0.0757" quat="0.991300642490387 0.0 0.0 -0.1316169798374176">
+                    <joint name="RH:ring1_x" pos="0 0 0" axis="1 0 0" range="-40 90" stiffness="10" damping="0.2" armature=".01"/>
+                    <joint name="RH:ring1_y" pos="0 0 0" axis="0 1 0" range="-20 20" stiffness="10" damping="0.2" armature=".01"/>
+                    <!-- <joint name="RH:ring1_z" pos="0 0 0" axis="0 0 1" range="-20 20" stiffness="10" damping="0.2" armature=".01"/> -->
+                    <geom type="capsule" fromto="0 0 0 0 0 -0.035" size="0.008" density="1000"/>
+                    <body name="RH:ring2" pos="0 0 -0.043">
+                      <joint name="RH:ring2" pos="0 0 0" axis="1 0 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                      <geom type="capsule" fromto="0 0 -0.0071 0 0 -0.020731" size="0.007" density="1000"/>
+                      <body name="RH:ring3" pos="0 0 -0.027731">
+                          <joint name="RH:ring3" pos="0 0 0" axis="1 0 0" range="-5 90" stiffness="10" damping="0.2" armature=".01"/>
+                          <geom type="capsule" fromto="0 0 -0.0061 0 0 -0.021731" size="0.006" density="1000"/>
+                          <body name="RH:ring_tip" pos=" 0 0 -0.027731"></body>
+                      </body>
+                    </body>
+                </body>
+                <body name="RH:pinky1" pos="-0.0404 0.0065 -0.0645" quat="0.962675929069519 0.0 0.0 -0.27065661549568176">
+                    <joint name="RH:pinky1_x" pos="0 0 0" axis="1 0 0" range="-40 90" stiffness="10" damping="0.2" armature=".01"/>
+                    <joint name="RH:pinky1_y" pos="0 0 0" axis="0 1 0" range="-20 40" stiffness="10" damping="0.2" armature=".01"/>
+                    <!-- <joint name="RH:pinky1_z" pos="0 0 0" axis="0 0 1" range="-20 40" stiffness="10" damping="0.2" armature=".01"/> -->
+                    <geom type="capsule" fromto="0 0 0 0 0 -0.028" size="0.007" density="1000"/>
+                    <body name="RH:pinky2" pos="0 0 -0.035">
+                      <joint name="RH:pinky2" pos="0 0 0" axis="1 0 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                      <geom type="capsule" fromto="0 0 -0.0061 0 0 -0.016" size="0.006" density="1000"/>
+                      <body name="RH:pinky3" pos="0 0 -0.022">
+                        <joint name="RH:pinky3" pos="0 0 0" axis="1 0 0" range="-5 90" stiffness="10" damping="0.2" armature=".01"/>
+                        <geom type="capsule" fromto="0 0 -0.0051 0 0 -0.017" size="0.005" density="1000"/>
+                          <body name="RH:pinky_tip" pos=" 0 0 -0.022"></body>
+                      </body>
+                    </body>
+                </body>
+
+            </body>
+          </body>
+        </body>
+
+        <body name="left_upper_arm" pos="-0.02405 0.18311 0.24350">
+          <joint name="left_shoulder_x" pos="0 0 0" axis="1 0 0" range="-45 180" stiffness="200" damping="20" armature=".02"/>
+          <joint name="left_shoulder_y" pos="0 0 0" axis="0 1 0" range="-180 60" stiffness="200" damping="20" armature=".02"/>
+          <joint name="left_shoulder_z" pos="0 0 0" axis="0 0 1"  range="-90 90" stiffness="200" damping="20" armature=".02"/>
+          <geom name="left_upper_arm" type="capsule" fromto="0 0 -0.05 0 0 -0.23" size="0.045" density="982"/>
+
+          <body name="left_lower_arm" pos="0 0 -0.274788">
+            <joint name="left_elbow" pos="0 0 0" axis="0 1 0" range="-160 0" stiffness="150" damping="15" armature=".015"/>
+            <geom name="left_lower_arm" type="capsule" fromto="0 0 -0.0525 0 0 -0.2" size="0.04" density="1056"/>
+
+	          <body name="left_hand" pos="0 0 -0.258947">
+              <joint name="LH:wrist_x" pos="0 0 0" axis="1 0 0" range="-75 90" stiffness="10" damping="0.4" armature=".01" />
+              <joint name="LH:wrist_y" pos="0 0 0" axis="0 1 0" range="-45 45" stiffness="10" damping="0.4" armature=".01" />
+              <joint name="LH:wrist_z" pos="0 0 0" axis="0 0 1" range="-180 90" stiffness="10" damping="0.4" armature=".01" />
+              <!-- <geom name="left_hand" type="box" pos="0 0 -0.05" size="0.04 0.02 0.05" density="1865"/>
+              <body name="LH:palm" pos="0 -0.02 -0.05"></body> -->
+
+              <geom name="left_hand" type="box" pos="-0.005 -0.002 -0.04" size="0.0475 0.0115 0.04" density="1865"/>
+              <body name="LH:palm" pos="0 -0.0135 -0.08"></body>
+                
+              <body name="LH:thumb1" pos="0.0278 -0.0010 -0.0208">
+                <joint name="LH:thumb1_x" pos="0 0 0" axis="1 0 0" range="-45 -20" stiffness="10" damping="0.2" armature=".01"/>
+                <joint name="LH:thumb1_y" pos="0 0 0" axis="0 1 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                <joint name="LH:thumb1_z" pos="0 0 0" axis="0 0 1" range="-90 0" stiffness="10" damping="0.2" armature=".01"/>
+                <geom type="capsule" fromto="0 0 0 0.02989 0 0" size="0.01" density="1000"/>
+                  <body name="LH:thumb2" pos="0.03989 0 0">
+                    <joint name="LH:thumb2" pos="0 0 0" axis="0 1 0" range="0 90" stiffness="10" damping="0.2" armature=".01"/>
+                    <geom type="capsule" fromto="0.0091 0 0 0.021278 0 0" size="0.009" density="1000"/>
+                    <body name="LH:thumb3" pos="0.030278 0 0">
+                        <joint name="LH:thumb3" pos="0 0 0" axis="0 1 0" range="-5 90" stiffness="10" damping="0.2" armature=".01"/>
+                        <geom type="capsule" fromto="0.0086 0 0 0.021778 0 0" size="0.0085" density="1000"/>
+                        <body name="LH:thumb_tip" pos="0.030278 0 0"></body>
+                    </body>
+                  </body>
+              </body>
+
+              <body name="LH:index1" pos="0.0312 -0.0010 -0.0784" quat="0.9956693053245544 0.0 0.0 0.0929655209183693">
+                <joint name="LH:index1_x" pos="0 0 0" axis="1 0 0" range="-90 40" stiffness="10" damping="0.2" armature=".01"/>
+                <joint name="LH:index1_y" pos="0 0 0" axis="0 1 0" range="-30 30" stiffness="10" damping="0.2" armature=".01"/>
+                <!-- <joint name="LH:index1_z" pos="0 0 0" axis="0 0 1" range="-30 30" stiffness="10" damping="0.2" armature=".01"/> -->
+                <geom type="capsule" fromto="0 0 0 0 0 -0.036" size="0.009" density="1000"/>
+                  <body name="LH:index2" pos="0 0 -0.045">
+                    <joint name="LH:index2" pos="0 0 0" axis="1 0 0" range="-90 0" stiffness="10" damping="0.2" armature=".01"/>
+                    <geom type="capsule" fromto="0 0 -0.0076 0 0 -0.0201851" size="0.0075" density="1000"/>
+                    <body name="LH:index3" pos="0 0 -0.0276851">
+                        <joint name="LH:index3" pos="0 0 0" axis="1 0 0" range="-90 5" stiffness="10" damping="0.2" armature=".01"/>
+                        <geom type="capsule" fromto="0 0 -0.0071 0 0 -0.0206851" size="0.007" density="1000"/>
+                        <body name="LH:index_tip" pos=" 0 0 -0.0276851"></body>
+                    </body>
+                  </body>
+              </body>
+              <body name="LH:middle1" pos="0.0054 -0.0010 -0.0813" quat="0.999756932258606 0.0 0.0 0.022048236802220345">
+                  <joint name="LH:middle1_x" pos="0 0 0" axis="1 0 0" range="-90 40" stiffness="10" damping="0.2" armature=".01"/>
+                  <joint name="LH:middle1_y" pos="0 0 0" axis="0 1 0" range="-20 20" stiffness="10" damping="0.2" armature=".01"/>
+                  <!-- <joint name="LH:middle1_z" pos="0 0 0" axis="0 0 1" range="-20 20" stiffness="10" damping="0.2" armature=".01"/> -->
+                  <geom type="capsule" fromto="0 0 0 0 0 -0.038" size="0.009" density="1000"/>
+                  <body name="LH:middle2" pos="0 0 -0.047">
+                    <joint name="LH:middle2" pos="0 0 0" axis="1 0 0" range="-90 0" stiffness="10" damping="0.2" armature=".01"/>
+                    <geom type="capsule" fromto="0 0 -0.0076 0 0 -0.0235" size="0.0075" density="1000"/>
+                    <body name="LH:middle3" pos="0 0 -0.031">
+                        <joint name="LH:middle3" pos="0 0 0" axis="1 0 0" range="-90 5" stiffness="10" damping="0.2" armature=".01"/>
+                        <geom type="capsule" fromto="0 0 -0.0071 0 0 -0.024" size="0.007" density="1000"/>
+                        <body name="LH:middle_tip" pos=" 0 0 -0.031"></body>
+                    </body>
+                  </body>
+              </body>
+              <body name="LH:ring1" pos="-0.0196 -0.0036 -0.0757" quat="0.991300642490387 0.0 0.0 0.1316169798374176">
+                  <joint name="LH:ring1_x" pos="0 0 0" axis="1 0 0" range="-90 40" stiffness="10" damping="0.2" armature=".01"/>
+                  <joint name="LH:ring1_y" pos="0 0 0" axis="0 1 0" range="-20 20" stiffness="10" damping="0.2" armature=".01"/>
+                  <!-- <joint name="LH:ring1_z" pos="0 0 0" axis="0 0 1" range="-20 20" stiffness="10" damping="0.2" armature=".01"/> -->
+                  <geom type="capsule" fromto="0 0 0 0 0 -0.035" size="0.008" density="1000"/>
+                  <body name="LH:ring2" pos="0 0 -0.043">
+                    <joint name="LH:ring2" pos="0 0 0" axis="1 0 0" range="-90 0" stiffness="10" damping="0.2" armature=".01"/>
+                    <geom type="capsule" fromto="0 0 -0.0071 0 0 -0.020731" size="0.007" density="1000"/>
+                    <body name="LH:ring3" pos="0 0 -0.027731">
+                        <joint name="LH:ring3" pos="0 0 0" axis="1 0 0" range="-90 5" stiffness="10" damping="0.2" armature=".01"/>
+                        <geom type="capsule" fromto="0 0 -0.0061 0 0 -0.021731" size="0.006" density="1000"/>
+                        <body name="LH:ring_tip" pos=" 0 0 -0.027731"></body>
+                    </body>
+                  </body>
+              </body>
+              <body name="LH:pinky1" pos="-0.0404 -0.0065 -0.0645" quat="0.962675929069519 0.0 0.0 0.27065661549568176">
+                <joint name="LH:pinky1_x" pos="0 0 0" axis="1 0 0" range="-90 40" stiffness="10" damping="0.2" armature=".01"/>
+                <joint name="LH:pinky1_y" pos="0 0 0" axis="0 1 0" range="-20 40" stiffness="10" damping="0.2" armature=".01"/>
+                <!-- <joint name="LH:pinky1_z" pos="0 0 0" axis="0 0 1" range="-20 40" stiffness="10" damping="0.2" armature=".01"/> -->
+                <geom type="capsule" fromto="0 0 0 0 0 -0.028" size="0.007" density="1000"/>
+                  <body name="LH:pinky2" pos="0 0 -0.035">
+                    <joint name="LH:pinky2" pos="0 0 0" axis="1 0 0" range="-90 0" stiffness="10" damping="0.2" armature=".01"/>
+                    <geom type="capsule" fromto="0 0 -0.0061 0 0 -0.016" size="0.006" density="1000"/>
+                    <body name="LH:pinky3" pos="0 0 -0.022">
+                      <joint name="LH:pinky3" pos="0 0 0" axis="1 0 0" range="-90 5" stiffness="10" damping="0.2" armature=".01"/>
+                      <geom type="capsule" fromto="0 0 -0.0051 0 0 -0.017" size="0.005" density="1000"/>
+                        <body name="LH:pinky_tip" pos=" 0 0 -0.022"></body>
+                    </body>
+                  </body>
+              </body>
+
+            </body>
+          </body>
+        </body>
+      </body>
+
+      <body name="right_thigh" pos="0 -0.084887 0">
+        <joint name="right_hip_x" pos="0 0 0" axis="1 0 0" range="-60 15" stiffness="300" damping="30" armature=".02"/>
+        <joint name="right_hip_y" pos="0 0 0" axis="0 1 0" range="-140 60" stiffness="300" damping="30" armature=".02"/>
+        <joint name="right_hip_z" pos="0 0 0" axis="0 0 1" range="-60 35" stiffness="300" damping="30" armature=".02"/>
+        <geom name="right_thigh" type="capsule" fromto="0 0 -0.06 0 0 -0.36" size="0.055" density="1269"/>
+
+        <body name="right_shin" pos="0 0 -0.421546">
+          <joint name="right_knee" pos="0 0 0" axis="0 1 0" range="0 160" stiffness="300" damping="30" armature=".02"/>
+          <geom name="right_shin" type="capsule" fromto="0 0 -0.045 0 0 -0.355"  size=".05" density="1014"/>
+
+          <body name="right_foot" pos="0 0 -0.409870">
+            <joint name="right_ankle_x" pos="0 0 0" axis="1 0 0" range="-30 30" stiffness="200" damping="20" armature=".01"/>
+            <joint name="right_ankle_y" pos="0 0 0" axis="0 1 0" range="-55 55" stiffness="200" damping="20" armature=".01"/>
+            <joint name="right_ankle_z" pos="0 0 0" axis="0 0 1" range="-40 40" stiffness="200" damping="20" armature=".01"/>
+            <geom name="right_foot" type="box" pos="0.045 0 -0.0225" size="0.0885 0.045 0.0275" density="1141"/>
+          </body>
+        </body>
+      </body>
+
+      <body name="left_thigh" pos="0 0.084887 0">
+        <joint name="left_hip_x" pos="0 0 0" axis="1 0 0" range="-15 60" stiffness="300" damping="30" armature=".02"/>
+        <joint name="left_hip_y" pos="0 0 0" axis="0 1 0" range="-140 60" stiffness="300" damping="30" armature=".02"/>
+        <joint name="left_hip_z" pos="0 0 0" axis="0 0 1" range="-35 60" stiffness="300" damping="30" armature=".02"/>
+        <geom name="left_thigh" type="capsule" fromto="0 0 -0.06 0 0 -0.36" size=".055" density="1269"/>
+
+        <body name="left_shin" pos="0 0 -0.421546">
+          <joint name="left_knee" pos="0 0 0" axis="0 1 0" range="0 160" stiffness="300" damping="30" armature=".02"/>
+          <geom name="left_shin" type="capsule" fromto="0 0 -0.045 0 0 -0.355"  size=".05" density="1014"/>
+
+          <body name="left_foot" pos="0 0 -0.409870">
+            <joint name="left_ankle_x" pos="0 0 0" axis="1 0 0" range="-30 30" stiffness="200" damping="20" armature=".01"/>
+            <joint name="left_ankle_y" pos="0 0 0" axis="0 1 0" range="-55 55" stiffness="200" damping="20" armature=".01"/>
+            <joint name="left_ankle_z" pos="0 0 0" axis="0 0 1" range="-40 40" stiffness="200" damping="20" armature=".01"/>
+            <geom name="left_foot" type="box" pos="0.045 0 -0.0225" size="0.0885 0.045 0.0275" density="1141"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="pelvis" body2="torso" />
+    <exclude body1="left_hand" body2="LH:thumb1" />
+    <!-- <exclude body1="LH:thumb1" body2="LH:thumb2" /> -->
+    <!-- <exclude body1="LH:thumb2" body2="LH:thumb3" /> -->
+    <exclude body1="left_hand" body2="LH:index1" />
+    <!-- <exclude body1="LH:index1" body2="LH:index2" /> -->
+    <!-- <exclude body1="LH:index2" body2="LH:index3" /> -->
+    <exclude body1="left_hand" body2="LH:middle1" />
+    <!-- <exclude body1="LH:middle1" body2="LH:middle2" /> -->
+    <!-- <exclude body1="LH:middle2" body2="LH:middle3" /> -->
+    <exclude body1="left_hand" body2="LH:ring1" />
+    <!-- <exclude body1="LH:ring1" body2="LH:ring2" /> -->
+    <!-- <exclude body1="LH:ring2" body2="LH:ring3" /> -->
+    <exclude body1="left_hand" body2="LH:pinky1" />
+    <!-- <exclude body1="LH:pinky1" body2="LH:pinky2" /> -->
+    <!-- <exclude body1="LH:pinky2" body2="LH:pinky3" /> -->
+    <exclude body1="right_hand" body2="RH:thumb1" />
+    <!-- <exclude body1="RH:thumb1" body2="RH:thumb2" /> -->
+    <!-- <exclude body1="RH:thumb2" body2="RH:thumb3" /> -->
+    <exclude body1="right_hand" body2="RH:index1" />
+    <!-- <exclude body1="RH:index1" body2="RH:index2" /> -->
+    <!-- <exclude body1="RH:index2" body2="RH:index3" /> -->
+    <exclude body1="right_hand" body2="RH:middle1" />
+    <!-- <exclude body1="RH:middle1" body2="RH:middle2" /> -->
+    <!-- <exclude body1="RH:middle2" body2="RH:middle3" /> -->
+    <exclude body1="right_hand" body2="RH:ring1" />
+    <!-- <exclude body1="RH:ring1" body2="RH:ring2" /> -->
+    <!-- <exclude body1="RH:ring2" body2="RH:ring3" /> -->
+    <exclude body1="right_hand" body2="RH:pinky1" />
+    <!-- <exclude body1="RH:pinky1" body2="RH:pinky2" /> -->
+    <!-- <exclude body1="RH:pinky2" body2="RH:pinky3" /> -->
+  </contact>
+
+  <!-- <actuator>
+    <motor name='abdomen_x'        gear='125' joint='abdomen_x'/>
+    <motor name='abdomen_y'        gear='125' joint='abdomen_y'/>
+    <motor name='abdomen_z'        gear='125' joint='abdomen_z'/>
+    <motor name='neck_x'           gear='20'  joint='neck_x'/>
+    <motor name='neck_y'           gear='20'  joint='neck_y'/>
+    <motor name='neck_z'           gear='20'  joint='neck_z'/>
+    <motor name='right_shoulder_x' gear='70'  joint='right_shoulder_x'/>
+    <motor name='right_shoulder_y' gear='70'  joint='right_shoulder_y'/>
+    <motor name='right_shoulder_z' gear='70'  joint='right_shoulder_z'/>
+    <motor name='right_elbow'      gear='60'  joint='right_elbow'/>
+    <motor name='left_shoulder_x'  gear='70'  joint='left_shoulder_x'/>
+    <motor name='left_shoulder_y'  gear='70'  joint='left_shoulder_y'/>
+    <motor name='left_shoulder_z'  gear='70'  joint='left_shoulder_z'/>
+    <motor name='left_elbow'       gear='60'  joint='left_elbow'/>
+    <motor name='right_hip_x'      gear='125' joint='right_hip_x'/>
+    <motor name='right_hip_z'      gear='125' joint='right_hip_z'/>
+    <motor name='right_hip_y'      gear='125' joint='right_hip_y'/>
+    <motor name='right_knee'       gear='100' joint='right_knee'/>
+    <motor name='right_ankle_x'    gear='50'  joint='right_ankle_x'/>
+    <motor name='right_ankle_y'    gear='50'  joint='right_ankle_y'/>
+    <motor name='right_ankle_z'    gear='50'  joint='right_ankle_z'/>
+    <motor name='left_hip_x'       gear='125' joint='left_hip_x'/>
+    <motor name='left_hip_z'       gear='125' joint='left_hip_z'/>
+    <motor name='left_hip_y'       gear='125' joint='left_hip_y'/>
+    <motor name='left_knee'        gear='100' joint='left_knee'/>
+    <motor name='left_ankle_x'     gear='50'  joint='left_ankle_x'/>
+    <motor name='left_ankle_y'     gear='50'  joint='left_ankle_y'/>
+    <motor name='left_ankle_z'     gear='50'  joint='left_ankle_z'/>
+  </actuator> -->
+</mujoco>

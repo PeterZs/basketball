@@ -1,0 +1,10 @@
+motions:
+  # fake finger
+  - file: motions/defense/stitch_100_loop3.json
+    weight: null
+  - file: motions/defense/stitch_100_loop3_mirror.json
+    weight: null
+  - file: motions/defense/stitch_108_loop5.json
+    weight: null
+  - file: motions/defense/stitch_108_loop5_mirror.json
+    weight: null

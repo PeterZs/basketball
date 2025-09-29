@@ -1,0 +1,65 @@
+motions:
+  - file: motions/dribble/dribble1.json
+    weight: null
+  - file: motions/dribble/dribble1_mirror.json
+    weight: null
+  - file: motions/dribble/dribble2.json
+    weight: null
+  - file: motions/dribble/dribble2_mirror.json
+    weight: null
+  - file: motions/dribble/dribble3.json
+    weight: null
+  - file: motions/dribble/dribble3_mirror.json
+    weight: null
+
+  - file: motions/dribble/dribble_2_3.json
+    weight: null
+  - file: motions/dribble/dribble_2_3_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_4.json
+    weight: null
+  - file: motions/dribble/dribble_2_4_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_5.json
+    weight: null
+  - file: motions/dribble/dribble_2_5_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_6.json
+    weight: null
+  - file: motions/dribble/dribble_2_6_mirror.json
+    weight: null
+
+  - file: motions/dribble/dribble_2_11.json
+    weight: null
+  - file: motions/dribble/dribble_2_11_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_12.json
+    weight: null
+  - file: motions/dribble/dribble_2_12_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_14.json
+    weight: null
+  - file: motions/dribble/dribble_2_14_mirror.json
+    weight: null
+
+  - file: motions/dribble/dribble_stationary_3.json
+    weight: null
+  - file: motions/dribble/dribble_stationary_3_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_stationary_4.json
+    weight: null
+  - file: motions/dribble/dribble_stationary_4_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_stationary_6.json
+    weight: null
+  - file: motions/dribble/dribble_stationary_6_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_moving_3.json
+    weight: null
+  - file: motions/dribble/dribble_moving_3_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_moving_6.json
+    weight: null
+  - file: motions/dribble/dribble_moving_6_mirror.json
+    weight: null
+

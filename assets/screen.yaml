@@ -1,0 +1,20 @@
+motions:
+  # fake fingers
+  - file: motions/screen/stitch_106.json
+    weight: null
+  - file: motions/screen/stitch_106_mirror.json
+    weight: null
+  - file: motions/screen/stitch_107.json
+    weight: null
+  - file: motions/screen/stitch_107_mirror.json
+    weight: null
+
+  # estimated fingers
+  - file: motions/screen/pick_and_roll_4.json
+    weight: null
+  - file: motions/screen/pick_and_roll_4_mirror.json
+    weight: null
+  - file: motions/screen/pick_and_roll_5_ext.json
+    weight: null
+  - file: motions/screen/pick_and_roll_5_ext_mirror.json
+    weight: null

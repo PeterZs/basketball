@@ -1,0 +1,42 @@
+motions:
+  # fake finger
+  - file: motions/defense/stitch_100_loop3.json
+    weight: null
+  - file: motions/defense/stitch_100_loop3_mirror.json
+    weight: null
+  - file: motions/defense/stitch_108_loop5.json
+    weight: null
+  - file: motions/defense/stitch_108_loop5_mirror.json
+    weight: null
+
+  # one arm lifted not much
+  - file: motions/defense/stitch_113.json
+    weight: null
+  - file: motions/defense/stitch_113_mirror.json
+    weight: null
+
+  # one arm lifted up
+  - file: motions/defense/stitch_114.json
+    weight: null
+  - file: motions/defense/stitch_114_mirror.json
+    weight: null
+
+  # one arm lifted plus one lifted up
+  - file: motions/defense/stitch_104.json
+    weight: null
+  - file: motions/defense/stitch_104_mirror.json
+    weight: null
+
+  # two arms lifted up and back
+  - file: motions/defense/stitch_116.json # lift
+    weight: null
+  - file: motions/defense/stitch_116_mirror.json
+    weight: null
+  - file: motions/defense/stitch_117.json # keep up
+    weight: null
+  - file: motions/defense/stitch_117_mirror.json
+    weight: null
+  - file: motions/defense/stitch_118.json  # reverse of 116
+    weight: null
+  - file: motions/defense/stitch_118_mirror.json
+    weight: null

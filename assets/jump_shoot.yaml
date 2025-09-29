@@ -1,0 +1,6 @@
+motions:
+  - file: motions/shoot/jump_shoot2.json
+    weight: null
+  - file: motions/shoot/jump_shoot4.json
+    weight: null
+

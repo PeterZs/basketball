@@ -1,0 +1,113 @@
+motions:
+  - file: motions/dribble_nofinger/dribble4_nofinger.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble4_nofinger_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble5_nofinger.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble5_nofinger_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble6_nofinger.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble6_nofinger_mirror.json
+    weight: null
+
+  - file: motions/dribble/dribble_2_3.json
+    weight: null
+  - file: motions/dribble/dribble_2_3_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_4.json
+    weight: null
+  - file: motions/dribble/dribble_2_4_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_5.json
+    weight: null
+  - file: motions/dribble/dribble_2_5_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_6.json
+    weight: null
+  - file: motions/dribble/dribble_2_6_mirror.json
+    weight: null
+
+  - file: motions/dribble/dribble_2_11.json
+    weight: null
+  - file: motions/dribble/dribble_2_11_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_12.json
+    weight: null
+  - file: motions/dribble/dribble_2_12_mirror.json
+    weight: null
+  - file: motions/dribble/dribble_2_14.json
+    weight: null
+  - file: motions/dribble/dribble_2_14_mirror.json
+    weight: null
+
+  - file: motions/dribble_nofinger/dribble_stationary_1.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_1_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_2.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_2_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_3.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_3_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_4.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_4_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_5.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_stationary_5_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_moving_3.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_moving_3_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_moving_5.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_moving_5_mirror.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_moving_6.json
+    weight: null
+  - file: motions/dribble_nofinger/dribble_moving_6_mirror.json
+    weight: null
+  
+  - file: motions/dribble/stitch_005.json
+    weight: null
+  - file: motions/dribble/stitch_005_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_007.json
+    weight: null
+  - file: motions/dribble/stitch_007_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_013.json
+    weight: null
+  - file: motions/dribble/stitch_013_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_014.json
+    weight: null
+  - file: motions/dribble/stitch_014_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_039.json
+    weight: null
+  - file: motions/dribble/stitch_039_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_047.json
+    weight: null
+  - file: motions/dribble/stitch_047_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_065.json
+    weight: null
+  - file: motions/dribble/stitch_065_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_098.json
+    weight: null
+  - file: motions/dribble/stitch_098_mirror.json
+    weight: null
+  - file: motions/dribble/stitch_045.json
+    weight: null
+  - file: motions/dribble/stitch_045_mirror.json
+    weight: null

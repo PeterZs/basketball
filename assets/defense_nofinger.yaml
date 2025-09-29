@@ -1,0 +1,14 @@
+motions:
+  - file: motions/defense_nofinger/defense_1_smooth.json
+    weight: null
+  - file: motions/defense_nofinger/defense_1_smooth_mirror.json
+    weight: null
+  - file: motions/defense_nofinger/defense_2_smooth.json
+    weight: null
+  - file: motions/defense_nofinger/defense_2_smooth_mirror.json
+    weight: null
+  - file: motions/defense_nofinger/defense_3_smooth.json
+    weight: null
+  - file: motions/defense_nofinger/defense_3_smooth_mirror.json
+    weight: null
+  

@@ -1,0 +1,62 @@
+motions:
+  # no finger
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_26.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_26_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_25.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_25_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_24.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_24_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_23.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_23_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_22.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_22_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_21.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_21_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_20.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_20_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_19.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_19_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_18.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_18_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_17.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_17_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_16.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_16_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_15.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_15_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_14.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_14_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_13.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_13_mirror.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_12.json
+    weight: null
+  - file: motions/dribble_to_shoot2_truncated/dribble_to_shoot2_12_mirror.json
+    weight: null

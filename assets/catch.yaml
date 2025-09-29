@@ -1,0 +1,30 @@
+motions:
+  # fake finger
+  - file: motions/catch/stitch_080.json
+    weight: null
+  - file: motions/catch/stitch_080_mirror.json
+    weight: null
+  - file: motions/catch/stitch_081.json
+    weight: null
+  - file: motions/catch/stitch_081_mirror.json
+    weight: null
+    
+  - file: motions/catch/stitch_133.json
+    weight: null
+  - file: motions/catch/stitch_133_mirror.json
+    weight: null    
+  - file: motions/catch/stitch_135.json
+    weight: null
+  - file: motions/catch/stitch_135_mirror.json
+    weight: null
+
+  # jump catch
+  - file: motions/catch/stitch_087.json
+    weight: null
+  - file: motions/catch/stitch_087_mirror.json
+    weight: null
+
+  - file: motions/catch/stitch_061.json
+    weight: null
+  - file: motions/catch/stitch_061_mirror.json
+    weight: null

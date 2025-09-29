@@ -1,0 +1,10 @@
+motions:
+  # fake finger
+  - file: motions/pass/stitch_069.json
+    weight: null
+  - file: motions/pass/stitch_069_mirror.json
+    weight: null
+  - file: motions/pass/stitch_070.json
+    weight: null
+  - file: motions/pass/stitch_070_mirror.json
+    weight: null
