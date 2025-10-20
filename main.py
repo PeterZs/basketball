@@ -410,19 +410,8 @@ if __name__ == "__main__":
     else:
         num_envs = training_params.num_envs
         if settings.ckpt:
-            import sys
             if os.path.isfile(settings.ckpt) or os.path.exists(os.path.join(settings.ckpt, "ckpt")):
                 raise ValueError("Checkpoint folder {} exists. Add `--test` option to run test with an existing checkpoint file".format(settings.ckpt))
-            else:
-                import shutil
-                os.makedirs(settings.ckpt, exist_ok=True)
-                shutil.copy(settings.config, settings.ckpt)
-                shutil.copy(sys.argv[0], settings.ckpt)
-                shutil.copy("env1.py", settings.ckpt)
-                shutil.copy("utils.py", settings.ckpt)
-                shutil.copy("models.py", settings.ckpt)
-            with open(os.path.join(settings.ckpt, "command_{}.txt".format(time.time())), "w") as f:
-                f.write(" ".join(sys.argv))
 
     if settings.test:
         config.env_params["episode_length"] = 500000
